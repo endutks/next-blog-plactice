@@ -24,7 +24,7 @@ export default async function BlogPostPage({params}: {params: Promise<{id: strin
         <main className={styles.main}>
             <h1 className={styles.title}>{post.title}</h1>
             <div className={styles.tags}>カテゴリー：{post.tags && post.tags.name}</div>
-            <div className={styles.post} dangerouslySetInnerHTML={{__html: post.content}} />
+            <div className={styles.post}>{post.content}</div>
         </main>
     )
 }
